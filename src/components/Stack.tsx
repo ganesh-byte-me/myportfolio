@@ -1,6 +1,6 @@
 
 
-export default function(){
+export default function Stack(){
     return <div className="flex flex-col gap-y-4">
         <div className="ml-50 text-4xl font-extralight tracking-wide">TECH STACK</div>
         <div className="ml-60 flex flex-wrap gap-4  [&>span]:border

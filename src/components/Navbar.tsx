@@ -1,6 +1,6 @@
 
 
-export default function(){
+export default function NavBar(){
 
     return <>
         <div className="h-14 w-[50%] mt-6 m-auto border-1 border-gray-600 rounded-full" >

@@ -1,6 +1,6 @@
 
 
-export default function(){
+export default function Experience(){
     return <div className="flex flex-col gap-y-4">
         <div className="ml-50 text-4xl font-extralight tracking-wide">
                 Experience
