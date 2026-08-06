@@ -7,7 +7,7 @@ export default function Intro() {
       <div className="flex items-center gap-x-20">
         <div className="ml-40">
           <Image
-            src="https://media.licdn.com/dms/image/v2/D4D35AQGHpUo2QYj2kQ/profile-framedphoto-shrink_400_400/B4DZjIu3z5HYAc-/0/1755714387584?e=1761771600&v=beta&t=7ueoZb2GxqHVhzBSucK-eh76PVsa6N5AHZkTijTKS0w"
+            src="https://media.licdn.com/dms/image/v2/D5603AQF4LCvkpqTSfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714319866219?e=1787788800&v=beta&t=d6WLR-gKs3bJmDGDDeFio404UT96fL_GNHr-PFQ2W7c"
             alt="Profile photo"
             width={192}
             height={192}
@@ -15,8 +15,8 @@ export default function Intro() {
           />
         </div>
         <div className="flex flex-col gap-y-5">
-          <div className="font-serif text-4xl">Hey, I'm Ganesh</div>
-          <div className="font-sans font-mono text-gray-400 rounded text-center">
+          <div className="font-serif text-4xl">Hey, I&apos;m Ganesh</div>
+          <div className="font-sans font-mono text-gray-400 rounded">
             OPEN TO FULLTIME OPPURTUNITIES
           </div>
           <div className=" flex flex-row gap-x-8">
@@ -40,8 +40,41 @@ export default function Intro() {
                 </span>
               </Link>
             </div>
-
             <div>
+              <Link
+                href="https://leetcode.com/u/Ganeshkrishna1429/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row gap-x-2"
+                aria-label="Open Leetcode profile"
+              >
+                <Image
+                  className="h-6 w-6"
+                  width={192}
+                  height={192}
+                  src="/leetcode.png"
+                  alt=""
+                />
+                <span className="hover:text-white flex items-end text-gray-400">
+                  Leetcode
+                </span>
+              </Link>
+            </div>
+            <div>
+              <Link
+                href="https://takeuforward.org/profile/Ganesh1429"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row gap-x-2"
+              >
+                <img className="invert w-6" src="/takeUforward.png" alt="takeUforward" />
+
+                <div className="hover:text-white flex items-end text-gray-400">
+                  TakeUforward
+                </div>
+              </Link>
+            </div>
+            {/* <div>
               <Link
                 href="https://github.com/ganesh-byte-me"
                 target="_blank"
@@ -60,11 +93,17 @@ export default function Intro() {
                   GitHub
                 </div>
               </Link>
-            </div>
+            </div> */}
             <div>
-              <Link href="" className="flex flex-row gap-x-2">
-                <img className="invert w-6" src="resume.png" alt="" />
-                <div className="hover:text-white flex items-end  text-gray-400">
+              <Link
+                href="/GaneshResume_2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row gap-x-2"
+              >
+                <img className="invert w-6" src="/resume.png" alt="Resume" />
+
+                <div className="hover:text-white flex items-end text-gray-400">
                   Resume
                 </div>
               </Link>

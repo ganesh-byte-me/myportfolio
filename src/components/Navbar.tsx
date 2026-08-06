@@ -7,8 +7,9 @@ export default function NavBar(){
             <div className="mt-5 font-geistSans text-gray-300 flex justify-evenly ">
             <a href="#about" className="hover:text-white cursor-pointer">About</a>
             <a href="#stack" className="hover:text-white cursor-pointer">Stack</a>
-            <a href="#projects" className="hover:text-white cursor-pointer">Projects</a>
+            {/* <a href="#projects" className="hover:text-white cursor-pointer">Projects</a> */}
             <a href="#experience" className="hover:text-white cursor-pointer">Experience</a>
+            <a href="#contact" className="hover:text-white cursor-pointer">Contact</a>
             </div>
         </div>
     </>
