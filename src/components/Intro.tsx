@@ -67,7 +67,13 @@ export default function Intro() {
                 rel="noopener noreferrer"
                 className="flex flex-row gap-x-2"
               >
-                <img className="invert w-6" src="/takeUforward.png" alt="takeUforward" />
+                <Image
+                  src="/takeUforward.png"
+                  alt="takeUforward"
+                  width={24}
+                  height={24}
+                  className="invert w-6 h-6"
+                />
 
                 <div className="hover:text-white flex items-end text-gray-400">
                   TakeUforward
@@ -101,7 +107,13 @@ export default function Intro() {
                 rel="noopener noreferrer"
                 className="flex flex-row gap-x-2"
               >
-                <img className="invert w-6" src="/resume.png" alt="Resume" />
+                <Image
+                  src="/resume.png"
+                  alt="Resume"
+                  width={24}
+                  height={24}
+                  className="invert w-6 h-6"
+                />
 
                 <div className="hover:text-white flex items-end text-gray-400">
                   Resume
