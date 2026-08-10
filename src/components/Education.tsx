@@ -27,7 +27,7 @@ export default function Education() {
           <div className="flex flex-row justify-between text-gray-200">
             <div>
               <h3>Aurora&apos;s Technological & Research Institute</h3>
-              <p className="text-sm text-gray-400">Mequon, Wisconsin</p>
+              <p className="text-sm text-gray-400">Hyderabad, India</p>
             </div>
             <span>Jun 2022</span>
           </div>
