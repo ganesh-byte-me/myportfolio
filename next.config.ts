@@ -1,15 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
-module.exports = {
+  devIndicators: false,
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'media.licdn.com',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "media.licdn.com",
+        pathname: "/**",
       },
     ],
   },

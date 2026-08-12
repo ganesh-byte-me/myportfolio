@@ -1,46 +1,20 @@
+const education = [
+  { school: "Concordia University Wisconsin", place: "Mequon, Wisconsin", date: "May 2025", degree: "Master of Science (M.S.) in Computer & Information Sciences" },
+  { school: "Aurora's Technological & Research Institute", place: "Hyderabad, India", date: "Jun 2022", degree: "Bachelor of Technology (B.Tech) in Computer Science" },
+];
+
 export default function Education() {
   return (
-    <div className="flex flex-col gap-y-4">
-      <div className="ml-50 text-4xl font-extralight tracking-wide">
-        EDUCATION
-      </div>
-
-      <div className="ml-60 flex flex-col gap-y-8">
-        {/* Master's */}
-        <div className="flex flex-col gap-y-3">
-          <div className="flex flex-row justify-between text-gray-200">
-            <div>
-              <h3>Concordia University Wisconsin</h3>
-              <p className="text-sm text-gray-400">Mequon, Wisconsin</p>
-            </div>
-            <span>May 2025</span>
-          </div>
-            <div className="text-gray-400">
-                <p className="font-medium text-gray-400">
-                Master of Science (M.S.) in Computer & Information Sciences
-                </p>
-            </div>
-
-        </div>
-        {/* Bachelor's */}
-        <div className="flex flex-col gap-y-3">
-          <div className="flex flex-row justify-between text-gray-200">
-            <div>
-              <h3>Aurora&apos;s Technological & Research Institute</h3>
-              <p className="text-sm text-gray-400">Hyderabad, India</p>
-            </div>
-            <span>Jun 2022</span>
-          </div>
-            <div className="text-gray-400">
-                <p className="font-medium text-gray-400">
-                Bachelor of Technology (B.Tech) in Computer Science
-                </p>
-            </div>
-
-        </div>
-
-
-
+    <div className="mt-24">
+      <p className="eyebrow">Education</p>
+      <div className="mt-8 grid gap-4 md:grid-cols-2">
+        {education.map((item) => (
+          <article key={item.school} className="glass-card rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/25 sm:p-8">
+            <div className="flex items-center justify-between text-xs text-zinc-500"><span>{item.place}</span><span>{item.date}</span></div>
+            <h3 className="mt-8 text-xl font-medium text-zinc-100">{item.school}</h3>
+            <p className="mt-3 text-sm leading-6 text-zinc-400">{item.degree}</p>
+          </article>
+        ))}
       </div>
     </div>
   );

@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-}
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #06070b;
+  --foreground: #f4f4f5;
+  --muted: #a1a1aa;
 }
 
 @theme inline {
@@ -15,15 +13,144 @@ html {
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(167, 139, 250, 0.35);
+  color: white;
+}
+
+.section-shell {
+  padding-top: 7rem;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #a78bfa;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  background: linear-gradient(90deg, #8b5cf6, #22d3ee);
+}
+
+.section-title {
+  margin-top: 1rem;
+  font-size: clamp(2.35rem, 5vw, 4.5rem);
+  font-weight: 300;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.glass-card {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(18px);
+}
+
+.ambient-scene {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.ambient-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 0%, #06070b 76%);
+}
+
+.moving-grid {
+  position: absolute;
+  inset: -80px;
+  opacity: 0.32;
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 70px 70px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+  animation: grid-drift 24s linear infinite;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(80px);
+  opacity: 0.22;
+  animation: float-orb 14s ease-in-out infinite alternate;
+}
+
+.orb-one { width: 30rem; height: 30rem; left: -12rem; top: 5rem; background: #7c3aed; }
+.orb-two { width: 25rem; height: 25rem; right: -8rem; top: 35%; background: #0891b2; animation-delay: -5s; }
+.orb-three { width: 20rem; height: 20rem; left: 38%; bottom: -8rem; background: #4f46e5; animation-delay: -9s; }
+
+.star-field {
+  position: absolute;
+  inset: -20%;
+  background-repeat: repeat;
+  will-change: transform;
+}
+
+.stars-near {
+  opacity: 0.7;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.95) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(165,243,252,.85) 0 1px, transparent 1.7px),
+    radial-gradient(circle, rgba(196,181,253,.9) 0 1.2px, transparent 1.8px);
+  background-position: 18px 24px, 112px 86px, 52px 144px;
+  background-size: 173px 181px, 229px 211px, 257px 239px;
+  animation: stars-wander 26s ease-in-out infinite alternate;
+}
+
+.stars-far {
+  opacity: 0.35;
+  background-image:
+    radial-gradient(circle, white 0 .7px, transparent 1.2px),
+    radial-gradient(circle, rgba(221,214,254,.9) 0 .8px, transparent 1.3px);
+  background-position: 76px 35px, 144px 125px;
+  background-size: 137px 151px, 199px 187px;
+  animation: stars-drift 42s linear infinite;
+}
+
+.float-slow { animation: gentle-float 5s ease-in-out infinite; }
+.pulse-ring { animation: pulse-ring 2.5s ease-out infinite; }
+
+@keyframes grid-drift { to { transform: translate3d(70px, 70px, 0); } }
+@keyframes float-orb { to { transform: translate3d(55px, -40px, 0) scale(1.12); } }
+@keyframes gentle-float { 50% { transform: translateY(-10px) rotate(2deg); } }
+@keyframes pulse-ring { 70%, 100% { transform: scale(2.3); opacity: 0; } }
+@keyframes stars-wander {
+  0% { transform: translate3d(-2%, -1%, 0) rotate(0deg); }
+  45% { transform: translate3d(3%, 2%, 0) rotate(.4deg); }
+  100% { transform: translate3d(-1%, 5%, 0) rotate(-.3deg); }
+}
+@keyframes stars-drift { to { transform: translate3d(120px, -90px, 0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }
