@@ -2,6 +2,15 @@ import Education from "./Education";
 
 const roles = [
   {
+    company: "R.O.B.O.", title: "Robotics Operations & Software Support Engineer", date: "Apr 2026 – Present", location: "Fremont, CA",
+    points: [
+      "Monitor robotic operations using real-time dashboards, logs, telemetry, connectivity, and task-execution data to identify abnormal patterns and support root-cause analysis.",
+      "Support integrations across robots, backend servers, warehouse management systems, and software services using APIs, scripts, Linux/Unix diagnostics, and CLI tooling.",
+      "Develop and maintain Python/Node.js automation utilities for diagnostics, data extraction, and operational reporting; troubleshoot incidents and escalate engineering issues with relevant logs and technical context.",
+    ],
+    tools: ["Python", "Node.js", "APIs", "Linux/Unix", "CLI", "Automation", "Robotics Operations", "Real-Time Monitoring", "Telemetry", "Diagnostics", "Incident Troubleshooting", "Warehouse Management Systems"],
+  },
+  {
     company: "Brillio Technologies", title: "Software Engineer", date: "Jan 2026 – April 2026", location: "NYC, NY",
     points: [
       "Designed and implemented scalable distributed contact-routing systems using Amazon Connect, handling 200+ agents and approximately 5K daily requests while improving system reliability and fault tolerance.",
