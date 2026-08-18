@@ -27,7 +27,7 @@ const roles = [
     tools: ["Node.js", "JavaScript", "React", "REST APIs", "Linux", "Microservices", "CI/CD Pipelines"],
   },
   {
-    company: "Concordia University Makerspace Lab", title: "Software Engineer", date: "Jan 2024 – May 2025", location: "",
+    company: "Concordia University Makerspace Lab", title: "Student Software Developer", date: "Jan 2024 – May 2025", location: "",
     points: [
       "Designed and deployed a full-stack web application used across the university, supporting 100+ users and daily transactions while improving operational efficiency by approximately 40%.",
       "Developed scalable backend services and optimized database systems, reducing response time by approximately 30% and maintaining 99% system availability.",
@@ -35,7 +35,7 @@ const roles = [
     tools: ["Node.js", "JavaScript", "React", "SQL", "REST APIs", "Full-Stack Development", "Distributed Systems", "Performance Optimization", "Reliability", "Scalability"],
   },
   {
-    company: "Splash Distributors LLC", title: "Web Developer", date: "May 2023 – Dec 2023", location: "",
+    company: "Splash Distributors LLC", title: "Web Developer Intern", date: "May 2023 – Dec 2023", location: "",
     points: [
       "Developed and maintained the company's web platform with inventory synchronization, automated product-publishing pipelines, and regular data updates.",
       "Designed and updated the website for special events, including creating visuals and improving the overall user experience.",
