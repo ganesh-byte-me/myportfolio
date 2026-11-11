@@ -16,7 +16,7 @@ export default function Intro() {
           <div className="absolute -inset-5 rounded-full bg-gradient-to-br from-violet-500/30 to-cyan-400/20 blur-2xl" />
           <div className="relative rounded-[2.5rem] border border-white/15 bg-white/5 p-3 shadow-2xl shadow-violet-950/40 backdrop-blur">
             <Image
-              src="https://media.licdn.com/dms/image/v2/D5603AQF4LCvkpqTSfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714319866219?e=1787788800&v=beta&t=d6WLR-gKs3bJmDGDDeFio404UT96fL_GNHr-PFQ2W7c"
+              src="/photo.jpeg"
               alt="Ganesh Krishna"
               width={340}
               height={340}
